@@ -16,4 +16,10 @@ app.use(express.static("public"))
 app.use(cookieParser())
 // user k side saved cookies jo sirf server acess kar sakta hai  
 
+// routes import
+import userRouter from "./routes/user.routes.js"
+ 
+// routes declaration 
+app.use("/api/v2/users",userRouter)
+
 export {app};
